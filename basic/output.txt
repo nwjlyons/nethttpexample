@@ -1,0 +1,7 @@
+$ curl -i localhost:8000
+HTTP/1.1 200 OK
+Date: Mon, 30 Mar 2015 11:35:10 GMT
+Content-Length: 3
+Content-Type: text/plain; charset=utf-8
+
+foo

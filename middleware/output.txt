@@ -1,0 +1,9 @@
+$ curl -i localhost:8000/about
+HTTP/1.1 302 Found
+Location: /about/
+Date: Mon, 30 Mar 2015 12:27:31 GMT
+Content-Length: 30
+Content-Type: text/html; charset=utf-8
+
+<a href="/about/">Found</a>.
+
