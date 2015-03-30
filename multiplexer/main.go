@@ -27,13 +27,12 @@ func (m multiplexer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+var mux = multiplexer{
+	"/":         foo{},
+	"/about/":   page{"about"},
+	"/contact/": page{"contact"},
+}
+
 func main() {
-
-	mux := multiplexer{
-		"/":        foo{},
-		"/about":   page{"about"},
-		"/contact": page{"contact"},
-	}
-
 	http.ListenAndServe(":8000", mux)
 }

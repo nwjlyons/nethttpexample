@@ -48,6 +48,9 @@ var mux = multiplexer{
 	"/contact/": page{"contact"},
 }
 
+// Wrap mux with middleware
+var handlers = appendTrailingSlash(mux)
+
 func main() {
-	http.ListenAndServe(":8000", appendTrailingSlash(mux))
+	http.ListenAndServe(":8000", handlers)
 }
